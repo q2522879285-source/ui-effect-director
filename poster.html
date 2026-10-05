@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1080">
+<title>UI 效果导演 · 一图流</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #f6f4ed; }
+  body { font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", sans-serif; color: #162623; }
+  .poster { width: 1080px; height: 1920px; position: relative; overflow: hidden; background: #f6f4ed; }
+  .eyebrow { position: absolute; top: 51px; left: 64px; right: 64px; display: flex; justify-content: space-between; align-items: center; }
+  .brand { font: 600 23px/1.2 "Segoe UI", sans-serif; letter-spacing: 2.2px; }
+  .badge { background: #dceabb; padding: 10px 20px; border-radius: 30px; font: 600 20px/1 "Segoe UI", sans-serif; letter-spacing: 1px; }
+  h1 { position: absolute; top: 125px; left: 62px; margin: 0; font-size: 92px; font-weight: 700; line-height: 1.18; letter-spacing: -4px; }
+  .tagline { position: absolute; top: 255px; left: 64px; margin: 0; font-size: 46px; font-weight: 500; letter-spacing: -1px; }
+  .dek { position: absolute; top: 330px; left: 66px; margin: 0; font-size: 27px; color: #61716b; letter-spacing: .5px; }
+  .hero { position: absolute; top: 379px; left: 0; width: 1080px; height: 590px; object-fit: contain; }
+  .flow { position: absolute; top: 976px; left: 64px; right: 64px; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid #bec9be; padding-top: 25px; }
+  .step { position: relative; padding-left: 2px; }
+  .step .num { color: #275dd1; font: 600 20px/1.2 "Segoe UI", sans-serif; letter-spacing: 1px; }
+  .step strong { display: block; margin-top: 12px; font-size: 30px; font-weight: 600; }
+  .step:not(:last-child)::after { content: "→"; position: absolute; right: 19px; top: 36px; font-size: 28px; color: #879d91; }
+  .section-title { position: absolute; top: 1133px; left: 64px; right: 64px; display: flex; justify-content: space-between; align-items: baseline; }
+  .section-title h2 { margin: 0; font-size: 31px; font-weight: 600; }
+  .section-title span { font: 500 18px "Segoe UI", sans-serif; letter-spacing: 2px; color: #76877c; }
+  .examples { position: absolute; top: 1192px; left: 64px; right: 64px; }
+  .example { border-top: 1px solid #d0d7cb; padding: 12px 0; }
+  .pair { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .say { font-size: 28px; line-height: 1.25; font-weight: 600; white-space: nowrap; }
+  .term { font: 600 25px/1.3 "Segoe UI", sans-serif; color: #275dd1; }
+  .example p { margin: 5px 0 0; font-size: 22px; line-height: 1.35; color: #63716b; }
+  .cta { position: absolute; top: 1595px; left: 64px; right: 64px; height: 247px; border-radius: 27px; background: #172d27; color: #f5f5ec; padding: 31px 32px; }
+  .cta .label { font: 600 18px/1 "Segoe UI", sans-serif; letter-spacing: 2px; color: #cce68d; }
+  .cta h2 { margin: 20px 0 20px; font-size: 37px; line-height: 1.15; font-weight: 600; }
+  .url { display: block; white-space: nowrap; font: 24px/1.45 Consolas, "SFMono-Regular", monospace; color: #edf4d4; text-decoration: none; }
+  .cta p { margin: 16px 0 0; font-size: 22px; color: #b5c6b8; }
+  .footer { position: absolute; left: 64px; right: 64px; top: 1870px; display: flex; justify-content: space-between; font-size: 20px; color: #76877c; }
+  .footer span:last-child { font: 500 18px/1.5 "Segoe UI", sans-serif; letter-spacing: 1px; }
+</style>
+</head>
+<body>
+<main class="poster">
+  <header class="eyebrow"><span class="brand">UI EFFECT DIRECTOR</span><span class="badge">CODEX SKILL · MIT</span></header>
+  <h1>UI 效果导演</h1>
+  <p class="tagline">你说感觉，它来推荐与转译。</p>
+  <p class="dek">不用先学术语，把想法变成可执行的界面效果。</p>
+  <img class="hero" src="assets/hero.png" alt="自然语言气泡流向立体界面组件的视觉隐喻">
+  <section class="flow" aria-label="工作流程">
+    <div class="step"><span class="num">01 / INTENT</span><strong>表达感觉</strong></div>
+    <div class="step"><span class="num">02 / SELECT</span><strong>推荐效果</strong></div>
+    <div class="step"><span class="num">03 / SPEC</span><strong>专业规格</strong></div>
+    <div class="step"><span class="num">04 / BUILD</span><strong>按授权实现</strong></div>
+  </section>
+  <section class="section-title"><h2>从一句话，到一套操作</h2><span>FEELING → MECHANISM</span></section>
+  <section class="examples">
+    <article class="example"><div class="pair"><span class="say">“按下去有手感”</span><span class="term">Press feedback</span></div><p>按下即时反馈；松开或取消恢复，键盘也可用。</p></article>
+    <article class="example"><div class="pair"><span class="say">“内容层层出现”</span><span class="term">Staggered reveal</span></div><p>短内容组依次出现；减少动态效果时直接展示。</p></article>
+    <article class="example"><div class="pair"><span class="say">“切换不要生硬”</span><span class="term">View transition</span></div><p>衔接前后状态；连续操作以最新选择为准。</p></article>
+    <article class="example"><div class="pair"><span class="say">“面板像磨砂玻璃”</span><span class="term">Frosted glass</span></div><p>半透明背景 + 背景模糊；文字清晰、对比足够。</p></article>
+  </section>
+  <section class="cta">
+    <span class="label">OPEN SOURCE / MIT LICENSE</span>
+    <h2>把想法说出来，下一步交给它。</h2>
+    <a class="url" href="https://github.com/q2522879285-source/ui-effect-director">https://github.com/q2522879285-source/ui-effect-director</a>
+    <p>安装与示例见 README · 可在项目中设为条件默认</p>
+  </section>
+  <footer class="footer"><span>适用 Web / UI · 引导 / 转译 / 执行</span><span>HONG HOU ZI / 2026</span></footer>
+</main>
+</body>
+</html>

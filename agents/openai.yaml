@@ -1,0 +1,6 @@
+interface:
+  display_name: "UI 效果导演"
+  short_description: "用自然语言挑选合适的界面效果，并转成专业术语、操作规格与实现指令"
+  default_prompt: "用 $ui-effect-director 帮我把想要的界面感觉变成合适的效果，并转成可以直接实现的专业描述。"
+policy:
+  allow_implicit_invocation: true
